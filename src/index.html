@@ -6,7 +6,8 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="./output.css">
-  
+  <script defer src="./index.js"></script>
+
   <title>Frontend Mentor | Age calculator app</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -21,7 +22,7 @@
     <article class="bg-white sm:w-[36rem] rounded-t-3xl rounded-bl-3xl rounded-br-6xl py-14 px-5 sm:pl-10 relative">
       <!-- Date Form -->
       <section class="relative pb-16 sm:pr-24 border border-b-light-grey border-t-0 border-l-0 border-r-0 sm:w-[30rem]" >
-        <form id="date-form" action="https://www.google.com" class="grid grid-cols-3 gap-x-4 gap-y-1">
+        <form id="date-form" action="#!" class="grid grid-cols-3 gap-x-4 gap-y-1">
           <div class="day-wrapper">
             <label class="uppercase tracking-widest font-semibold text-smokey-grey text-xs" for="day">Day</label>
             <input class="border border-light-grey hover:border-off-black w-full outline-none rounded-lg p-3 font-bold text-xl placeholder:font-semibold" type="number" id="day" name="day" placeholder="DD" required>
@@ -39,7 +40,7 @@
           </div>
         </form>
         <div class="absolute left-0 -bottom-7 flex justify-center sm:justify-end w-full">
-          <button class="bg-purple hover:bg-off-black rounded-full p-2 focus:scale-110 transition-transform" type="submit" form="date-form">
+          <button class="bg-purple hover:bg-off-black rounded-full p-2 focus:scale-110 focus:outline-none  transition-transform" type="submit" form="date-form">
             <svg class="scale-60" xmlns="http://www.w3.org/2000/svg" width="46" height="44" viewBox="0 0 46 44">
               <g fill="none" stroke="#FFF" stroke-width="3">
                 <path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"/>
@@ -52,15 +53,15 @@
       <!-- Age Display -->
       <section class="text-5xl sm:text-7xl pt-14 font-bold italic">
         <p>
-          <span class="text-purple">--</span> 
+          <span id="years" class="text-purple">--</span> 
           years
         </p>
         <p>
-          <span class="text-purple">--</span> 
+          <span id="months" class="text-purple">--</span> 
           months
         </p>
         <p>
-          <span class="text-purple">--</span> 
+          <span id="days" class="text-purple">--</span> 
           days
         </p>
       </section>
