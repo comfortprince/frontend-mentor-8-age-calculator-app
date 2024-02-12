@@ -2,9 +2,15 @@ const dateForm = document.querySelector('#date-form')
 const yearsSpan = document.querySelector('#years')
 const monthsSpan = document.querySelector('#months')
 const daysSpan = document.querySelector('#days')
+const dayWrapper = document.querySelector("#day-wrapper")
+const monthWrapper = document.querySelector("#month-wrapper")
+const yearWrapper = document.querySelector("#year-wrapper")
 
 dateForm.addEventListener('submit', event => {
     event.preventDefault()
+    Array.from(dayWrapper.children).forEach(item => { item.dataset.error = "" })
+    Array.from(monthWrapper.children).forEach(item => { item.dataset.error = "" })
+    Array.from(yearWrapper.children).forEach(item => { item.dataset.error = "" })
 
     // Read Birth Date
     const form = new FormData(event.target)  
@@ -18,16 +24,27 @@ dateForm.addEventListener('submit', event => {
     } catch (error) {
         switch (error.type) {
             case 'day':
-                console.log(error.message);
+                Array.from(dayWrapper.children).forEach(item => {
+                    item.dataset.error = "active"
+                    if (item.classList.contains('error'))
+                        item.innerHTML = error.message
+                })
                 break;
             case 'month':
-                console.log(error.message);
+                Array.from(monthWrapper.children).forEach(item => {
+                    item.dataset.error = "active"
+                    if (item.classList.contains('error'))
+                        item.innerHTML = error.message
+                })
                 break;
             case 'year':
-                console.log(error.message);
+                Array.from(yearWrapper.children).forEach(item => {
+                    item.dataset.error = "active"
+                    if (item.classList.contains('error'))
+                        item.innerHTML = error.message
+                })
                 break;
             default:
-                console.log("Default");
                 break;
         }
         return

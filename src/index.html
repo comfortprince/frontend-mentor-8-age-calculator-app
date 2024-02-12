@@ -23,20 +23,20 @@
       <!-- Date Form -->
       <section class="relative pb-16 sm:pr-24 border border-b-light-grey border-t-0 border-l-0 border-r-0 sm:w-[30rem]" >
         <form id="date-form" action="#!" class="grid grid-cols-3 gap-x-4 gap-y-1">
-          <div class="day-wrapper">
-            <label class="uppercase tracking-widest font-semibold text-smokey-grey text-xs" for="day">Day</label>
-            <input class="border border-light-grey hover:border-off-black w-full outline-none rounded-lg p-3 font-bold text-xl placeholder:font-semibold" type="number" id="day" name="day" placeholder="DD" required>
-            <div class="error text-[10px] hidden italic text-light-red">Must be a valid day</div>
+          <div id="day-wrapper">
+            <label data-error="" class="uppercase tracking-widest font-semibold text-smokey-grey error:text-light-red text-xs" for="day">Day</label>
+            <input data-error="" class="border border-light-grey error:border-light-red hover:border-off-black w-full outline-none rounded-lg p-3 font-bold text-xl placeholder:font-semibold" type="number" id="day" name="day" placeholder="DD" required>
+            <div data-error="" class="error text-[10px] hidden error:block italic text-light-red">Must be a valid day</div>
           </div>
-          <div class="month-wrapper">
-            <label class="uppercase tracking-widest font-semibold text-smokey-grey text-xs" for="month">Month</label>
-            <input class="border border-light-grey hover:border-off-black w-full outline-none rounded-lg p-3 font-bold text-xl placeholder:font-semibold" type="number" id="month" name="month" placeholder="MM" required>
-            <div class="error text-[10px] hidden italic text-light-red">Must be a valid month</div>
+          <div id="month-wrapper">
+            <label data-error="" class="uppercase tracking-widest font-semibold text-smokey-grey error:text-light-red text-xs" for="month">Month</label>
+            <input data-error="" class="border border-light-grey error:border-light-red hover:border-off-black w-full outline-none rounded-lg p-3 font-bold text-xl placeholder:font-semibold" type="number" id="month" name="month" placeholder="MM" required>
+            <div data-error="" class="error text-[10px] hidden error:block italic text-light-red">Must be a valid month</div>
           </div>
-          <div class="year-wrapper">
-            <label class="uppercase tracking-widest font-semibold text-smokey-grey text-xs" for="year">Year</label>
-            <input class="border border-light-grey hover:border-off-black w-full outline-none rounded-lg p-3 font-bold text-xl placeholder:font-semibold" type="number" id="year" name="year" placeholder="YYYY" required>
-            <div class="error text-[10px] hidden italic text-light-red">Must be in the past</div>
+          <div id="year-wrapper">
+            <label data-error="" class="uppercase tracking-widest font-semibold text-smokey-grey error:text-light-red text-xs" for="year">Year</label>
+            <input data-error="" class="border border-light-grey error:border-light-red hover:border-off-black w-full outline-none rounded-lg p-3 font-bold text-xl placeholder:font-semibold" type="number" id="year" name="year" placeholder="YYYY" required>
+            <div data-error="" class="error text-[10px] hidden error:block italic text-light-red">Must be in the past</div>
           </div>
         </form>
         <div class="absolute left-0 -bottom-7 flex justify-center sm:justify-end w-full">
